@@ -14,6 +14,8 @@
                 <outlet property="currentWord" destination="cmQ-kr-zvc" id="r4P-CO-aDk"/>
                 <outlet property="nextCard" destination="y4Y-VZ-yyk" id="Etg-DE-1Wr"/>
                 <outlet property="nextWord" destination="Lbj-8g-RVH" id="LU6-rU-9PU"/>
+                <outlet property="timerLabel" destination="lRo-Zp-TS5" id="p00-0g-dkL"/>
+                <outlet property="timerLine" destination="VlA-3E-2Oq" id="sbb-Ro-h7L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,11 +30,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbj-8g-RVH">
                             <rect key="frame" x="55" y="156" width="130.5" height="32.5"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Lbj-8g-RVH" firstAttribute="centerX" secondItem="y4Y-VZ-yyk" secondAttribute="centerX" id="7cb-sK-lgi"/>
                         <constraint firstItem="Lbj-8g-RVH" firstAttribute="centerY" secondItem="y4Y-VZ-yyk" secondAttribute="centerY" id="hyM-WY-u6O"/>
@@ -44,11 +46,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-kr-zvc">
                             <rect key="frame" x="55" y="156" width="130.5" height="32.5"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="cmQ-kr-zvc" firstAttribute="centerY" secondItem="Xe0-or-DiV" secondAttribute="centerY" id="gc4-Qg-tav"/>
                         <constraint firstItem="cmQ-kr-zvc" firstAttribute="centerX" secondItem="Xe0-or-DiV" secondAttribute="centerX" id="u2N-5l-N0Y"/>
@@ -96,6 +98,33 @@
                         <action selector="action:" destination="-1" eventType="touchUpInside" id="Bsf-3O-elW"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-Zp-TS5">
+                    <rect key="frame" x="187" y="153" width="40.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eBd-WS-P2a"/>
+                        <constraint firstAttribute="width" constant="40.5" id="zPM-XM-Itc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-hz-933">
+                    <rect key="frame" x="0.0" y="87" width="414" height="58"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-3E-2Oq">
+                            <rect key="frame" x="0.0" y="8" width="414" height="42"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VlA-3E-2Oq" secondAttribute="trailing" id="2bl-yJ-kV5"/>
+                        <constraint firstItem="VlA-3E-2Oq" firstAttribute="leading" secondItem="c5d-hz-933" secondAttribute="leading" id="fqh-En-yKA"/>
+                        <constraint firstItem="VlA-3E-2Oq" firstAttribute="top" secondItem="c5d-hz-933" secondAttribute="top" constant="8" id="hl7-xV-Mht"/>
+                        <constraint firstAttribute="height" constant="58" id="wWZ-OW-5by"/>
+                        <constraint firstAttribute="bottom" secondItem="VlA-3E-2Oq" secondAttribute="bottom" constant="8" id="zvN-9z-zT5"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -105,12 +134,17 @@
                 <constraint firstItem="y4Y-VZ-yyk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="C0W-Aa-g4e"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="E1f-Gc-Ofv"/>
                 <constraint firstItem="y4Y-VZ-yyk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FGQ-nt-Pnm"/>
+                <constraint firstItem="lRo-Zp-TS5" firstAttribute="top" secondItem="c5d-hz-933" secondAttribute="bottom" constant="8" id="JvW-K2-jn3"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Osc-Oc-Ivd"/>
                 <constraint firstAttribute="trailing" secondItem="BRb-4c-0eZ" secondAttribute="trailing" constant="-50" id="PQW-bW-bzD"/>
                 <constraint firstItem="IY4-rN-Ik2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-40" id="Xbx-ez-cIx"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="232" id="bF0-X1-MWq"/>
+                <constraint firstItem="lRo-Zp-TS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="109" id="boB-w8-4F1"/>
+                <constraint firstItem="lRo-Zp-TS5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bw7-yK-L94"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IY4-rN-Ik2" secondAttribute="bottom" constant="60" id="fBb-Gi-Cxp"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fGh-sQ-lDs"/>
+                <constraint firstItem="c5d-hz-933" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ftk-lu-Cuw"/>
+                <constraint firstItem="c5d-hz-933" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lYG-lC-4vD"/>
                 <constraint firstItem="y4Y-VZ-yyk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="mrg-xu-TCE"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>

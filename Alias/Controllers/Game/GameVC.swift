@@ -31,12 +31,18 @@ class GameVC: UIViewController {
     @IBOutlet weak var nextWord: UILabel!
     
     //animation settings
-    private let animationDuration = 0.5
+    private let animationDuration = 0.3
     private let buttonScale = 1.2
     private let cardScale = 0.8
     private let cardTranslation: CGFloat = 200
     
     private let actionStatuses = [ActionStatus.wrong,.right]
+    
+    //timer
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerLine: UIView!
+    private var timer: Timer?
+    private var timeLeft = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +52,12 @@ class GameVC: UIViewController {
         } else {
             //ERROR
         }
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(updateTimer),
+                                     userInfo: nil,
+                                     repeats: true
+        )
     }
     
     @IBAction func action(_ sender: Any) {
@@ -60,6 +72,17 @@ class GameVC: UIViewController {
                 }
             }
             setNewWord(status: actionStatuses[button.tag])
+        }
+    }
+    
+    @objc func updateTimer() {
+        timeLeft -= 1
+        let timeWas = 60 - CGFloat(timeLeft)
+        if timeLeft == 0 {
+            finish()
+        } else {
+            timerLabel.text = String(timeLeft)
+            timerLine.transform = CGAffineTransform(translationX: -timerLine.frame.width/60*timeWas, y: 0)
         }
     }
     
@@ -80,6 +103,11 @@ class GameVC: UIViewController {
         } else {
             //ERROR
         }
+    }
+    
+    private func finish() {
+        //SHOW
+        
     }
     
 }
