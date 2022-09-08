@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartVC" customModule="Alias" customModuleProvider="target">
             <connections>
+                <outlet property="starImage" destination="OC9-Fh-jgw" id="rvI-H9-Wf5"/>
+                <outlet property="startButton" destination="bRG-7R-HaW" id="rbd-ne-HyB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,6 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OC9-Fh-jgw">
+                    <rect key="frame" x="143" y="383.5" width="128" height="128"/>
+                    <color key="tintColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="opI-SO-Lx9"/>
+                        <constraint firstAttribute="width" secondItem="OC9-Fh-jgw" secondAttribute="height" multiplier="1:1" id="xov-j4-Ohq"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-7R-HaW">
                     <rect key="frame" x="47" y="288" width="320" height="320"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -35,18 +45,24 @@
                             <integer key="value" value="160"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="startAction:" destination="-1" eventType="touchUpInside" id="vHd-3T-cvj"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="bRG-7R-HaW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Upb-HC-YTF"/>
+                <constraint firstItem="OC9-Fh-jgw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cRB-Hr-jrW"/>
+                <constraint firstItem="OC9-Fh-jgw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="evu-g3-Vyx"/>
                 <constraint firstItem="bRG-7R-HaW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zZJ-t5-VGE"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </view>
     </objects>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
