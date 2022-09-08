@@ -42,7 +42,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timerLine: UIView!
     private var timer: Timer?
-    private var timeLeft = 10
+    private var timeLeft = 60
     
     private var score = 0
     
@@ -52,7 +52,7 @@ class GameVC: UIViewController {
         if let word = word {
             currentWord.text = word
         } else {
-            //ERROR
+            backAction(0)
         }
         startTimer()
     }
@@ -75,6 +75,11 @@ class GameVC: UIViewController {
                 score += 1
             }
         }
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        WordsManager.shared.finishRaund()
+        dismiss(animated: false)
     }
     
     @objc func updateTimer() {
@@ -103,7 +108,7 @@ class GameVC: UIViewController {
                 }
             }
         } else {
-            //ERROR
+            backAction(0)
         }
     }
     
@@ -131,7 +136,7 @@ extension GameVC: GameDelegate {
         if let word = word {
             currentWord.text = word
         } else {
-            //ERROR
+            toMain()
         }
         timeLeft = 60
         startTimer()
