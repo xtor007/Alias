@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameVC" customModule="Alias" customModuleProvider="target">
             <connections>
+                <outlet property="currentCard" destination="Xe0-or-DiV" id="WEf-oO-u0H"/>
+                <outlet property="currentWord" destination="cmQ-kr-zvc" id="r4P-CO-aDk"/>
+                <outlet property="nextCard" destination="y4Y-VZ-yyk" id="Etg-DE-1Wr"/>
+                <outlet property="nextWord" destination="Lbj-8g-RVH" id="LU6-rU-9PU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +21,105 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-VZ-yyk">
+                    <rect key="frame" x="87" y="276" width="240" height="344"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbj-8g-RVH">
+                            <rect key="frame" x="55" y="156" width="130.5" height="32.5"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Lbj-8g-RVH" firstAttribute="centerX" secondItem="y4Y-VZ-yyk" secondAttribute="centerX" id="7cb-sK-lgi"/>
+                        <constraint firstItem="Lbj-8g-RVH" firstAttribute="centerY" secondItem="y4Y-VZ-yyk" secondAttribute="centerY" id="hyM-WY-u6O"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-or-DiV">
+                    <rect key="frame" x="87" y="276" width="240" height="344"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-kr-zvc">
+                            <rect key="frame" x="55" y="156" width="130.5" height="32.5"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cmQ-kr-zvc" firstAttribute="centerY" secondItem="Xe0-or-DiV" secondAttribute="centerY" id="gc4-Qg-tav"/>
+                        <constraint firstItem="cmQ-kr-zvc" firstAttribute="centerX" secondItem="Xe0-or-DiV" secondAttribute="centerX" id="u2N-5l-N0Y"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-4c-0eZ">
+                    <rect key="frame" x="283" y="742" width="181" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="181" id="7x8-Me-56w"/>
+                        <constraint firstAttribute="height" constant="60" id="vWV-jx-BCZ"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Right" titleAlignment="center">
+                        <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="action:" destination="-1" eventType="touchUpInside" id="dVv-GU-XdI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY4-rN-Ik2">
+                    <rect key="frame" x="-40" y="742" width="181" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="IzR-fz-mLk"/>
+                        <constraint firstAttribute="width" constant="181" id="rS8-22-u7z"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Wrong" titleAlignment="center">
+                        <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="action:" destination="-1" eventType="touchUpInside" id="Bsf-3O-elW"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
-            <point key="canvasLocation" x="139" y="91"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BRb-4c-0eZ" secondAttribute="bottom" constant="60" id="0Ea-B1-vgy"/>
+                <constraint firstItem="y4Y-VZ-yyk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="232" id="4I1-ss-D08"/>
+                <constraint firstItem="y4Y-VZ-yyk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="C0W-Aa-g4e"/>
+                <constraint firstItem="Xe0-or-DiV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="E1f-Gc-Ofv"/>
+                <constraint firstItem="y4Y-VZ-yyk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FGQ-nt-Pnm"/>
+                <constraint firstItem="Xe0-or-DiV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Osc-Oc-Ivd"/>
+                <constraint firstAttribute="trailing" secondItem="BRb-4c-0eZ" secondAttribute="trailing" constant="-50" id="PQW-bW-bzD"/>
+                <constraint firstItem="IY4-rN-Ik2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-40" id="Xbx-ez-cIx"/>
+                <constraint firstItem="Xe0-or-DiV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="232" id="bF0-X1-MWq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IY4-rN-Ik2" secondAttribute="bottom" constant="60" id="fBb-Gi-Cxp"/>
+                <constraint firstItem="Xe0-or-DiV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fGh-sQ-lDs"/>
+                <constraint firstItem="y4Y-VZ-yyk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="mrg-xu-TCE"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -14,6 +14,7 @@
 		FF9C3F5628CA2AC400EE6BAE /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5428CA2AC400EE6BAE /* StartVC.xib */; };
 		FF9C3F5928CA2DAA00EE6BAE /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */; };
 		FF9C3F5A28CA2DAA00EE6BAE /* GameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */; };
+		FF9C3F5E28CA38D100EE6BAE /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FF9C3F5428CA2AC400EE6BAE /* StartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
 		FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameVC.xib; sourceTree = "<group>"; };
+		FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FF9C3F3A28CA29E700EE6BAE /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				FF9C3F5C28CA38B400EE6BAE /* Managers */,
 				FF9C3F5128CA2A9500EE6BAE /* Controllers */,
 				FF9C3F5028CA2A2E00EE6BAE /* Resources */,
 				FF9C3F4F28CA2A1900EE6BAE /* App */,
@@ -108,6 +111,14 @@
 				FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		FF9C3F5C28CA38B400EE6BAE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9C3F5E28CA38D100EE6BAE /* WordsManager.swift in Sources */,
 				FF9C3F3C28CA29E700EE6BAE /* AppDelegate.swift in Sources */,
 				FF9C3F3E28CA29E700EE6BAE /* SceneDelegate.swift in Sources */,
 				FF9C3F5928CA2DAA00EE6BAE /* GameVC.swift in Sources */,
