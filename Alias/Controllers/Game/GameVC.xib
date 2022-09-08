@@ -14,6 +14,7 @@
                 <outlet property="currentWord" destination="cmQ-kr-zvc" id="r4P-CO-aDk"/>
                 <outlet property="nextCard" destination="y4Y-VZ-yyk" id="Etg-DE-1Wr"/>
                 <outlet property="nextWord" destination="Lbj-8g-RVH" id="LU6-rU-9PU"/>
+                <outlet property="pauseButton" destination="XVI-UK-Rzb" id="7pz-Jx-5oo"/>
                 <outlet property="timerLabel" destination="lRo-Zp-TS5" id="p00-0g-dkL"/>
                 <outlet property="timerLine" destination="VlA-3E-2Oq" id="sbb-Ro-h7L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -139,6 +140,20 @@
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="TRn-nK-Tjp"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-UK-Rzb">
+                    <rect key="frame" x="174" y="742" width="67" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="uU7-bi-vvb"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pauseAction:" destination="-1" eventType="touchUpInside" id="yWB-XI-2bA"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -153,6 +168,7 @@
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Osc-Oc-Ivd"/>
                 <constraint firstAttribute="trailing" secondItem="BRb-4c-0eZ" secondAttribute="trailing" constant="-50" id="PQW-bW-bzD"/>
                 <constraint firstItem="tvc-cJ-e0u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="UaX-8b-eLF"/>
+                <constraint firstItem="BRb-4c-0eZ" firstAttribute="leading" secondItem="XVI-UK-Rzb" secondAttribute="trailing" constant="42" id="WFZ-36-7TU"/>
                 <constraint firstItem="IY4-rN-Ik2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-40" id="Xbx-ez-cIx"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="232" id="bF0-X1-MWq"/>
                 <constraint firstItem="lRo-Zp-TS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="130" id="boB-w8-4F1"/>
@@ -160,15 +176,21 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IY4-rN-Ik2" secondAttribute="bottom" constant="60" id="fBb-Gi-Cxp"/>
                 <constraint firstItem="Xe0-or-DiV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fGh-sQ-lDs"/>
                 <constraint firstItem="c5d-hz-933" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ftk-lu-Cuw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XVI-UK-Rzb" secondAttribute="bottom" constant="60" id="kdy-wP-P4L"/>
                 <constraint firstItem="c5d-hz-933" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lYG-lC-4vD"/>
+                <constraint firstItem="XVI-UK-Rzb" firstAttribute="leading" secondItem="IY4-rN-Ik2" secondAttribute="trailing" constant="33" id="ljY-Zc-GDk"/>
                 <constraint firstItem="y4Y-VZ-yyk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="mrg-xu-TCE"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
         </view>
     </objects>
     <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

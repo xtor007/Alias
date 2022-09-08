@@ -24,6 +24,10 @@ class GameVC: UIViewController {
         
     }
     
+    private enum PauseStatus {
+        case pause, notPause
+    }
+    
     //card
     @IBOutlet weak var currentCard: UIView!
     @IBOutlet weak var currentWord: UILabel!
@@ -45,6 +49,9 @@ class GameVC: UIViewController {
     private var timeLeft = 60
     
     private var score = 0
+    
+    private var pauseStatus = PauseStatus.notPause
+    @IBOutlet weak var pauseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +87,19 @@ class GameVC: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         WordsManager.shared.finishRaund()
         dismiss(animated: false)
+    }
+    
+    @IBAction func pauseAction(_ sender: Any) {
+        switch pauseStatus {
+        case .pause:
+            pauseStatus = .notPause
+            startTimer()
+            pauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        case .notPause:
+            pauseStatus = .pause
+            timer?.invalidate()
+            pauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        }
     }
     
     @objc func updateTimer() {
