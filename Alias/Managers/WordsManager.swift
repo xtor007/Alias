@@ -11,33 +11,21 @@ class WordsManager {
     
     static let shared = WordsManager()
     
-    private var words: Set<String> = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "24"
-    ]
+    private var words: Set<String> = {
+        var data = Set<String>()
+        let path = Bundle.main.path(forResource: "Words", ofType: "plist")
+        if let path = path {
+            let words = NSArray(contentsOfFile: path)
+            if let words = words {
+                words.forEach { element in
+                    if let element = element as? String {
+                        data.insert(element)
+                    }
+                }
+            }
+        }
+        return data
+    }()
     private var currentRaund = Set<String>()
     private var prevRaund = Set<String>()
     

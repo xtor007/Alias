@@ -15,6 +15,7 @@
 		FF9C3F5928CA2DAA00EE6BAE /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */; };
 		FF9C3F5A28CA2DAA00EE6BAE /* GameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */; };
 		FF9C3F5E28CA38D100EE6BAE /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */; };
+		FF9C3F6028CA4C1E00EE6BAE /* Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5F28CA4C1E00EE6BAE /* Words.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameVC.xib; sourceTree = "<group>"; };
 		FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
+		FF9C3F5F28CA4C1E00EE6BAE /* Words.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Words.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9C3F4428CA29EF00EE6BAE /* Assets.xcassets */,
+				FF9C3F5F28CA4C1E00EE6BAE /* Words.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9C3F6028CA4C1E00EE6BAE /* Words.plist in Resources */,
 				FF9C3F4528CA29EF00EE6BAE /* Assets.xcassets in Resources */,
 				FF9C3F5A28CA2DAA00EE6BAE /* GameVC.xib in Resources */,
 				FF9C3F5628CA2AC400EE6BAE /* StartVC.xib in Resources */,
