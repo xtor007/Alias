@@ -42,7 +42,9 @@ class GameVC: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timerLine: UIView!
     private var timer: Timer?
-    private var timeLeft = 60
+    private var timeLeft = 10
+    
+    private var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +54,7 @@ class GameVC: UIViewController {
         } else {
             //ERROR
         }
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(updateTimer),
-                                     userInfo: nil,
-                                     repeats: true
-        )
+        startTimer()
     }
     
     @IBAction func action(_ sender: Any) {
@@ -72,17 +69,22 @@ class GameVC: UIViewController {
                 }
             }
             setNewWord(status: actionStatuses[button.tag])
+            if button.tag == 0 { //is wrong
+                score -= 1
+            } else {
+                score += 1
+            }
         }
     }
     
     @objc func updateTimer() {
         timeLeft -= 1
         let timeWas = 60 - CGFloat(timeLeft)
+        timerLabel.text = String(timeLeft)
+        timerLine.transform = CGAffineTransform(translationX: -timerLine.frame.width/60*timeWas, y: 0)
         if timeLeft == 0 {
+            timer?.invalidate()
             finish()
-        } else {
-            timerLabel.text = String(timeLeft)
-            timerLine.transform = CGAffineTransform(translationX: -timerLine.frame.width/60*timeWas, y: 0)
         }
     }
     
@@ -106,8 +108,37 @@ class GameVC: UIViewController {
     }
     
     private func finish() {
-        //SHOW
-        
+        WordsManager.shared.finishRaund()
+        let popUp = PopUpVC(score: score, delegate: self)
+        present(popUp, animated: true)
+    }
+    
+    private func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(updateTimer),
+                                     userInfo: nil,
+                                     repeats: true
+        )
+    }
+    
+}
+
+extension GameVC: GameDelegate {
+    
+    func startAgain() {
+        let word = WordsManager.shared.getWord()
+        if let word = word {
+            currentWord.text = word
+        } else {
+            //ERROR
+        }
+        timeLeft = 60
+        startTimer()
+    }
+    
+    func toMain() {
+        dismiss(animated: false)
     }
     
 }

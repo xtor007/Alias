@@ -86,7 +86,7 @@
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Wrong" titleAlignment="center">
+                    <buttonConfiguration key="configuration" style="plain" title="Skip" titleAlignment="center">
                         <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -116,7 +116,7 @@
                             <color key="backgroundColor" systemColor="systemGreenColor"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="VlA-3E-2Oq" secondAttribute="trailing" id="2bl-yJ-kV5"/>
                         <constraint firstItem="VlA-3E-2Oq" firstAttribute="leading" secondItem="c5d-hz-933" secondAttribute="leading" id="fqh-En-yKA"/>
@@ -151,9 +151,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

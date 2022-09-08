@@ -16,6 +16,9 @@
 		FF9C3F5A28CA2DAA00EE6BAE /* GameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */; };
 		FF9C3F5E28CA38D100EE6BAE /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */; };
 		FF9C3F6028CA4C1E00EE6BAE /* Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F5F28CA4C1E00EE6BAE /* Words.plist */; };
+		FF9C3F6428CA5A9D00EE6BAE /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F6228CA5A9D00EE6BAE /* PopUpVC.swift */; };
+		FF9C3F6528CA5A9D00EE6BAE /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9C3F6328CA5A9D00EE6BAE /* PopUpVC.xib */; };
+		FF9C3F6728CA612700EE6BAE /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9C3F6628CA612700EE6BAE /* GameDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameVC.xib; sourceTree = "<group>"; };
 		FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		FF9C3F5F28CA4C1E00EE6BAE /* Words.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Words.plist; sourceTree = "<group>"; };
+		FF9C3F6228CA5A9D00EE6BAE /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		FF9C3F6328CA5A9D00EE6BAE /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		FF9C3F6628CA612700EE6BAE /* GameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		FF9C3F5128CA2A9500EE6BAE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF9C3F6128CA5A8100EE6BAE /* PopUp */,
 				FF9C3F5B28CA2DB400EE6BAE /* Game */,
 				FF9C3F5228CA2A9F00EE6BAE /* Start */,
 			);
@@ -112,6 +119,7 @@
 			children = (
 				FF9C3F5828CA2DAA00EE6BAE /* GameVC.xib */,
 				FF9C3F5728CA2DAA00EE6BAE /* GameVC.swift */,
+				FF9C3F6628CA612700EE6BAE /* GameDelegate.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -122,6 +130,15 @@
 				FF9C3F5D28CA38D100EE6BAE /* WordsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		FF9C3F6128CA5A8100EE6BAE /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				FF9C3F6228CA5A9D00EE6BAE /* PopUpVC.swift */,
+				FF9C3F6328CA5A9D00EE6BAE /* PopUpVC.xib */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9C3F6528CA5A9D00EE6BAE /* PopUpVC.xib in Resources */,
 				FF9C3F6028CA4C1E00EE6BAE /* Words.plist in Resources */,
 				FF9C3F4528CA29EF00EE6BAE /* Assets.xcassets in Resources */,
 				FF9C3F5A28CA2DAA00EE6BAE /* GameVC.xib in Resources */,
@@ -199,7 +217,9 @@
 				FF9C3F5E28CA38D100EE6BAE /* WordsManager.swift in Sources */,
 				FF9C3F3C28CA29E700EE6BAE /* AppDelegate.swift in Sources */,
 				FF9C3F3E28CA29E700EE6BAE /* SceneDelegate.swift in Sources */,
+				FF9C3F6428CA5A9D00EE6BAE /* PopUpVC.swift in Sources */,
 				FF9C3F5928CA2DAA00EE6BAE /* GameVC.swift in Sources */,
+				FF9C3F6728CA612700EE6BAE /* GameDelegate.swift in Sources */,
 				FF9C3F5528CA2AC400EE6BAE /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
